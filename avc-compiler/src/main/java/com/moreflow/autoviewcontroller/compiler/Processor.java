@@ -23,7 +23,6 @@ public class Processor extends AbstractProcessor {
 
     @Override
     public boolean process(Set<? extends TypeElement> set, RoundEnvironment roundEnvironment) {
-        System.out.println("PROCESSING");
         StringBuilder builder = new StringBuilder()
                 .append("package com.moreflow.generated;\n\n")
                 .append("import com.moreflow.core.resolver.IControllerViewResolver;\n")
@@ -54,8 +53,6 @@ public class Processor extends AbstractProcessor {
         try {
             for (Element el : set) {
                 ViewController controllerClass = el.getAnnotation(ViewController.class);
-                System.out.println(el);
-                System.out.println(controllerClass);
                 String controllerClassName = getClassReference(getViewControllerClassTypeMirror(controllerClass));
                 if (!first) {
                     builder.append(" else ");
