@@ -6,9 +6,11 @@ import android.widget.TextView;
 
 import com.moreflow.android.view.IAndroidView;
 import com.moreflow.android.view.ViewMetadata;
+import com.moreflow.autoviewcontroller.ViewController;
 import com.moreflow.example.R;
 
 @ViewMetadata(layoutId = R.layout.test1)
+@ViewController(controller = TestController.class)
 public class TestView implements IAndroidView<TestController>, ITestView {
 
     private TextView textView;

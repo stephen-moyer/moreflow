@@ -1,1 +1,1 @@
-include ':core', ':android', ':example'
+include ':core', ':android', ':example', ':avc', ':avc-compiler'

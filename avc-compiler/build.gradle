@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'maven-publish'
+
+group = 'com.moreflow.avc-compiler'
+version = '1.0.0'
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':avc')
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
