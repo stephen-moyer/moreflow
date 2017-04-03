@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/android/android.iml" filepath="$PROJECT_DIR$/android/android.iml" />
       <module fileurl="file://$PROJECT_DIR$/avc/avc.iml" filepath="$PROJECT_DIR$/avc/avc.iml" />
       <module fileurl="file://$PROJECT_DIR$/avc-compiler/avc-compiler.iml" filepath="$PROJECT_DIR$/avc-compiler/avc-compiler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/avc-compiler/avc-compiler.iml" filepath="$PROJECT_DIR$/avc-compiler/avc-compiler.iml" />
       <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
       <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
     </modules>

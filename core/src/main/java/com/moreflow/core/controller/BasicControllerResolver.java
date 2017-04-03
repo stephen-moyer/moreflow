@@ -1,27 +1,26 @@
-package com.moreflow.android.view;
+package com.moreflow.core.controller;
 
-import com.moreflow.android.MoreFlowActivity;
+import com.moreflow.core.MoreFlow;
 import com.moreflow.core.resolver.IDependencyResolver;
-import com.moreflow.core.view.IView;
 
 import java.lang.reflect.InvocationTargetException;
 
 /**
- * Default view resolver that just looks for the constructor with a MoreFlowActivity parameter
+ * Default controller resolver that just looks for the constructor with a MoreFlow parameter
  * If that's not found, clazz.newInstance is called.
  */
-public class DefaultViewResolver implements IDependencyResolver<IView> {
+public class BasicControllerResolver implements IDependencyResolver<Controller> {
 
-    private final MoreFlowActivity activity;
+    private final MoreFlow moreFlow;
 
-    public DefaultViewResolver(MoreFlowActivity activity) {
-        this.activity = activity;
+    public BasicControllerResolver(MoreFlow moreFlow) {
+        this.moreFlow = moreFlow;
     }
 
     @Override
-    public IView resolve(Class<IView> clazz) {
+    public Controller resolve(Class<Controller> clazz) {
         try {
-            return clazz.getConstructor(MoreFlowActivity.class).newInstance(activity);
+            return clazz.getConstructor(Controller.class).newInstance(moreFlow);
         } catch (InstantiationException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
